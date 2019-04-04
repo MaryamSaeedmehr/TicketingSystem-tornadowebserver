@@ -41,7 +41,7 @@ $ pip install MySQL-python
 First of All Clone the Project : 
 
 ```shell
-$ git clone https://github.com/MaryamSaeedmehr/Supporting_System.git
+$ git clone https://github.com/MaryamSaeedmehr/TicketingSystem-tornadowebserver.git
 ```
 
 ## Step1 : Connect to MySQL and create a database
