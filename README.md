@@ -1,13 +1,9 @@
-# Supporting_System 
+# Ticketing System
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 
 
 This is Supporting system using Tornado Web server.
-
-Version : 1.0
-
-Build : Passing
 
 Author : Maryam Saeedmehr
 
