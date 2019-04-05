@@ -112,6 +112,8 @@ You Can See Example Below :
 
 ## OUR CLIENT CODE:
 
+run this in the terminal
+
 ```shell 
 $ pip3 install requests
 $ python3 client-[METHOD].py
