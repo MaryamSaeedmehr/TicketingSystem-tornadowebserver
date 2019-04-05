@@ -1,7 +1,5 @@
 # Ticketing System
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
-
 
 This is Ticketing System using Tornado Web server.
 
