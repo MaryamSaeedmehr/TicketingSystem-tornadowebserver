@@ -27,12 +27,12 @@ $ apt install python mysql
 For runnig code.py file You Need to install below pakcage for python  :
 
 - tornado 
-- MySQLdb
+- pymysql
 
 
 ```shell
 $ pip install 
-$ pip install MySQL-python
+$ pip install pymysql-python
 ```
 
 # **install**
@@ -102,7 +102,7 @@ You Can See Example Below :
 ### GET :
 
 
-![GET GIF](https://highhost.org/gif-video/bank-project-Server-GET.gif)
+![Server-get](https://user-images.githubusercontent.com/49061503/55613300-a3bd0080-579f-11e9-9c3c-e3ba3ba4c679.gif)
 
 
 
