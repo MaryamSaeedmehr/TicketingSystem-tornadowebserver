@@ -131,7 +131,8 @@ $ python3 client-[METHOD].py
 ### POST :
 
 
-This section has not been completed yet
+This section is exactly the same as the above.
+Obviously they are different in the background. :)
 
 
 # **Support**
