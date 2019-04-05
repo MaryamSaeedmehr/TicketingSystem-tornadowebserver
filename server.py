@@ -1,5 +1,5 @@
 import os.path
-import MySQLdb
+import pymysql
 import tornado.escape
 import tornado.httpserver
 import tornado.ioloop
@@ -9,6 +9,7 @@ from binascii import hexlify
 import tornado.web
 from tornado.options import define, options
 from time import gmtime, strftime
+pymysql.install_as_MySQLdb()
 
 define("port", default=1100, help="run on the given port", type=int)
 define("mysql_host", default="127.0.0.1", help="database host")
@@ -17,13 +18,13 @@ define("mysql_database", default="tickets", help="database name")
 define("mysql_user", default="maryam", help="database user")
 define("mysql_password", default="7731", help="database password")
 
-database = MySQLdb.connect(
+database = pymysql.connect(
             host=options.mysql_host,
             db=options.mysql_database,
             user=options.mysql_user,
             passwd=options.mysql_password
         )
-db = database.cursor(MySQLdb.cursors.DictCursor)
+db = database.cursor(pymysql.cursors.DictCursor)
 
 class Application(tornado.web.Application):
     def __init__(self):
@@ -159,6 +160,16 @@ class BaseHandler(tornado.web.RequestHandler):
                     CASE WHEN LEFT(api, 1) = '''' THEN 2 ELSE 1 END, \
                    LENGTH(api) - CASE WHEN LEFT(api, 1) = '''' \
                    THEN 1 ELSE 0 END - CASE WHEN RIGHT(api, 1) = '''' THEN 1 ELSE 0  END)")
+
+        db.execute("UPDATE users set api = SUBSTRING(api,\
+                            CASE WHEN LEFT(api, 1) = 'b' THEN 2 ELSE 1 END, \
+                           LENGTH(api) - CASE WHEN LEFT(api, 1) = 'b' \
+                           THEN 1 ELSE 0 END )")
+
+        db.execute("UPDATE users set api = SUBSTRING(api,\
+                            CASE WHEN LEFT(api, 1) = '''' THEN 2 ELSE 1 END, \
+                           LENGTH(api) - CASE WHEN LEFT(api, 1) = '''' \
+                           THEN 1 ELSE 0 END - CASE WHEN RIGHT(api, 1) = '''' THEN 1 ELSE 0  END)")
 
         db.execute("UPDATE users set status = SUBSTRING(status,\
                     CASE WHEN LEFT(status, 1) = '''' THEN 2 ELSE 1 END, \
