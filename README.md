@@ -112,8 +112,6 @@ You Can See Example Below :
 
 ## OUR CLIENT CODE:
 
-Just Go To Client Folders and Run Below Code : 
-
 ```shell 
 $ pip3 install requests
 $ python3 client-[METHOD].py
