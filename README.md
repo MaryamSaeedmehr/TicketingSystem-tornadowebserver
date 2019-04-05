@@ -124,7 +124,7 @@ $ python3 client-[METHOD].py
 ### GET :
 
 
-![GET GIF](https://highhost.org/gif-video/bank-project-Client-GET.gif)
+![client-get](https://user-images.githubusercontent.com/49061503/55613796-cbf92f00-57a0-11e9-97b2-402ae3886506.gif)
 
 
 
