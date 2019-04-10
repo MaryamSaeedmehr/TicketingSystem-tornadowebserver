@@ -29,8 +29,8 @@ For runnig code.py file You Need to install below pakcage for python  :
 
 
 ```shell
-$ pip install 
-$ pip install pymysql-python
+$ pip install tornado
+$ pip install PyMySQL
 ```
 
 # **install**
